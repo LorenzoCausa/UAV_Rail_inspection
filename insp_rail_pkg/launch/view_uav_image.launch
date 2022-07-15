@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="republish" type="republish" pkg="image_transport" output="screen" args="compressed in:=/output/image_raw raw out:=/output/image_raw" />
+    
+    <node pkg="image_view" type="image_view" respawn="true" name="image_view" args="image:=/output/image_raw"/>
+</launch>
