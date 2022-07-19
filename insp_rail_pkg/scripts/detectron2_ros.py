@@ -92,7 +92,7 @@ def getOrientedBoxes(mask,plot,pub=None):
     
     # Convert image to grayscale
     gray = cv2.cvtColor(mask, cv2.COLOR_BGR2GRAY)
-    im_width,im_height=gray.shape
+    im_height,im_width=gray.shape
 
     # Convert image to binary
     _, bw = cv2.threshold(gray, 50, 255, cv2.THRESH_BINARY)
