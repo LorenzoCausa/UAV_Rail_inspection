@@ -12,25 +12,31 @@ from std_msgs.msg import Float32
 x=float(0)
 y=float(0)
 angle=float(0)
-ground_distance=float(0.25)
+ground_distance=float(0)
 rail_detected=float(0)
 
 old_x=float(0)
 old_y=float(0)
 old_angle=float(0)
-old_ground_distance=float(3)
+old_ground_distance=float(0)
 
-P_gain_yaw=0.1
+P_gain_yaw=0.2
 D_gain_yaw=0
+I_gain_yaw=0
 
-P_gain_throttle=0.05
+P_gain_throttle=0.1
 D_gain_throttle=0
+I_gain_throttle=0
 
-P_gain_pitch=0.0001
+P_gain_pitch=0.001
 D_gain_pitch=0
+I_gain_pitch=0
 
+yaw_integral=0
+throttle_integral=0
+pitch_integral=0
 
-altitude=3 # meters
+altitude=2 # meters
 
 # FUNCTIONs
 def update_olds():
@@ -39,6 +45,12 @@ def update_olds():
     old_y=y
     old_angle=angle
     old_ground_distance=ground_distance
+
+def update_integrals(yaw_e, throttle_e,pitch_e):
+    global yaw_integral,throttle_integral,pitch_integral
+    yaw_integral=yaw_integral+yaw_e
+    throttle_integral=throttle_integral+throttle_e
+    pitch_integral=pitch_integral+pitch_e
 
 # SUBSCRIBERs CALLBACK
 def callback_loc(pose):
@@ -63,20 +75,21 @@ def main():
 
     while not rospy.is_shutdown():
 
-        cmd.yaw = -P_gain_yaw*angle - D_gain_yaw*(angle-old_angle) # signs may be due to the inverted image of the simulation
+        cmd.yaw = -P_gain_yaw*angle - D_gain_yaw*(angle-old_angle) -I_gain_yaw*yaw_integral # signs may be due to the inverted image of the simulation
         if(abs(cmd.yaw)>30): # MAX yaw DJI= 100 degree/s 
             cmd.yaw=30*(abs(cmd.yaw)/cmd.yaw)
 
-        cmd.throttle = P_gain_throttle*(altitude - ground_distance) - D_gain_throttle*(ground_distance-old_ground_distance)
+        cmd.throttle = P_gain_throttle*(altitude - ground_distance) + D_gain_throttle*(ground_distance-old_ground_distance) + I_gain_throttle*throttle_integral
         if(abs(cmd.throttle)>4): # MAX throttle DJI= 4m/s
             cmd.throttle=4*(abs(cmd.throttle)/cmd.throttle)
 
-        cmd.pitch =    P_gain_pitch*x - D_gain_pitch*(x-old_x)
+        cmd.pitch =    P_gain_pitch*x + D_gain_pitch*(x-old_x) + I_gain_pitch*pitch_integral
         if(abs(cmd.pitch)>5): # MAX roll/pitch DJI= 15m/s 
             cmd.pitch=5*(abs(cmd.pitch)/cmd.pitch)
 
         #print("P part: ", -P_gain_yaw*angle,", D part: ",- D_gain_yaw*(angle-old_angle)) 
         update_olds()
+        update_integrals(angle,(altitude-ground_distance),x)
 
         # speed management1
         #if(abs(x)<10 and abs(angle<5)):

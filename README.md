@@ -6,7 +6,7 @@ Method for the automated inspection of a rail section.
 ## How to build your model
 To train your model, and download the correspondant weights you can use my colab notebook:
 
-<https://colab.research.google.com/drive/1cuWjSNl8cpsKzjk40bJD1z3yOXSI98_v#scrollTo=YWAbjYn-eE27>
+<https://colab.research.google.com/drive/1cuWjSNl8cpsKzjk40bJD1z3yOXSI98_v?usp=sharing>
 
 ## Test
 All the test were carried out with Mavic2 enterprise dual UAV and in simulation ( with CoppeliaSim ).
