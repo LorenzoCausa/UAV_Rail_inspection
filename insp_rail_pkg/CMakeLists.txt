@@ -48,7 +48,9 @@ include_directories(
    scripts/frames2video.py
    scripts/pc_drone_controller.py
    scripts/drone_controller_simulation.py
-   scripts/drone_controller.py
+   scripts/PID_drone_controller.py
+   scripts/Lyapunov_drone_controller.py
+   
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 

@@ -37,7 +37,7 @@ yaw_integral=0
 throttle_integral=0
 pitch_integral=0
 
-altitude=3 # meters
+altitude=2 # meters
 
 # FUNCTIONs
 def update_olds():
@@ -67,7 +67,7 @@ def callback_ground(distance):
     ground_distance=distance.data
 
 def main():
-    rospy.init_node('drone_controller', anonymous=False)
+    rospy.init_node('lyapunov_drone_controller', anonymous=False)
     rospy.Subscriber("localization", Pose, callback_loc,queue_size=1)
     rospy.Subscriber("ground_distance", Float32, callback_ground,queue_size=1)
     command_pub=rospy.Publisher("command", Drone_cmd, queue_size=1) #maybe is better to use cmd_vel
@@ -92,51 +92,6 @@ def main():
             x_perp=math.sqrt(x_line*x_line+y_line*y_line)
         else:
             x_perp=-math.sqrt(x_line*x_line+y_line*y_line)
-
-        
-        ## NORMAL PID
-        '''
-        cmd.yaw = -P_gain_yaw*angle - D_gain_yaw*(angle-old_angle) -I_gain_yaw*yaw_integral # signs may be due to the inverted image of the simulation
-        if(abs(cmd.yaw)>30): # MAX yaw DJI= 100 degree/s 
-            cmd.yaw=30*(abs(cmd.yaw)/cmd.yaw)
-
-        cmd.throttle = P_gain_throttle*(altitude - ground_distance) + D_gain_throttle*(ground_distance-old_ground_distance) + I_gain_throttle*throttle_integral
-        if(abs(cmd.throttle)>4): # MAX throttle DJI= 4m/s
-            cmd.throttle=4*(abs(cmd.throttle)/cmd.throttle)
-
-        cmd.pitch =    P_gain_pitch*x + D_gain_pitch*(x-old_x) + I_gain_pitch*pitch_integral
-        if(abs(cmd.pitch)>5): # MAX roll/pitch DJI= 15m/s 
-            cmd.pitch=5*(abs(cmd.pitch)/cmd.pitch)
-
-        #print("P part: ", -P_gain_yaw*angle,", D part: ",- D_gain_yaw*(angle-old_angle)) 
-        update_olds()
-        update_integrals(angle,(altitude-ground_distance),x)
-        
-        # speed management1
-        #if(abs(x)<10 and abs(angle<5)):
-        #    cmd.roll=1
-        #elif(abs(x)<100 and abs(angle<20)):
-        #    cmd.roll=0.5
-        #else:
-        #    cmd.roll=0
-
-        # speed management2
-        cmd.roll=max(1-abs(x)/50,0)+max(1-abs(angle)/20,0) # MAX =2+2=4  best for now 
-
-        # speed management3
-        #cmd.roll=max(2-abs(x)/50,0)*max(2-abs(angle)/10,0) # MAX =2*2=4          
-        '''
-
-        ## SECOND CONTROL TECNIQUE(bleah)
-        
-        
-        #print("x perpendicular: ",x_perp)
-        
-        #cmd.roll=1-0.001*x_perp*math.sin(rad_angle)#1*math.cos(rad_angle)-0.01*x_perp*math.sin(rad_angle) #1-0.002*abs(x_perp)*math.cos(rad_angle)
-        #cmd.pitch=0.001*x_perp*math.cos(rad_angle)#-1*math.sin(rad_angle)
-        #cmd.yaw= -10*rad_angle #+0.01*x_perp*(cmd.roll*math.sin(rad_angle)/(rad_angle+0.0001)-cmd.pitch*math.cos(rad_angle)/(rad_angle+0.0001))-20*rad_angle
-
-        ## THIRD TECNIQUE super ganza
         
         V_x=2             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
         V_y=0.001*x_perp
