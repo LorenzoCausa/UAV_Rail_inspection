@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 # IMPORTS
+import math
 import rospy
 import roslib
 
@@ -75,7 +76,26 @@ def main():
     rate = rospy.Rate(20) # 20hz 
 
     while not rospy.is_shutdown():
+        
+        rad_angle=math.radians(angle)
 
+        if(angle==0):
+            x_line=x
+            y_line=0
+
+        else:
+            m=math.tan(-math.pi/2-rad_angle)
+            x_line=m*(m*x-y)/(1+m*m)
+            y_line=-(m*x-y)/(1+m*m)
+
+        if(x_line>0):
+            x_perp=math.sqrt(x_line*x_line+y_line*y_line)
+        else:
+            x_perp=-math.sqrt(x_line*x_line+y_line*y_line)
+
+        
+        ## NORMAL PID
+        """
         cmd.yaw = -P_gain_yaw*angle - D_gain_yaw*(angle-old_angle) -I_gain_yaw*yaw_integral # signs may be due to the inverted image of the simulation
         if(abs(cmd.yaw)>30): # MAX yaw DJI= 100 degree/s 
             cmd.yaw=30*(abs(cmd.yaw)/cmd.yaw)
@@ -91,7 +111,7 @@ def main():
         #print("P part: ", -P_gain_yaw*angle,", D part: ",- D_gain_yaw*(angle-old_angle)) 
         update_olds()
         update_integrals(angle,(altitude-ground_distance),x)
-
+        
         # speed management1
         #if(abs(x)<10 and abs(angle<5)):
         #    cmd.roll=1
@@ -105,6 +125,39 @@ def main():
 
         # speed management3
         #cmd.roll=max(2-abs(x)/50,0)*max(2-abs(angle)/10,0) # MAX =2*2=4          
+        """
+
+        ## SECOND CONTROL TECNIQUE(bleah)
+        
+        
+        #print("x perpendicular: ",x_perp)
+        
+        #cmd.roll=1-0.001*x_perp*math.sin(rad_angle)#1*math.cos(rad_angle)-0.01*x_perp*math.sin(rad_angle) #1-0.002*abs(x_perp)*math.cos(rad_angle)
+        #cmd.pitch=0.001*x_perp*math.cos(rad_angle)#-1*math.sin(rad_angle)
+        #cmd.yaw= -10*rad_angle #+0.01*x_perp*(cmd.roll*math.sin(rad_angle)/(rad_angle+0.0001)-cmd.pitch*math.cos(rad_angle)/(rad_angle+0.0001))-20*rad_angle
+
+        ## THIRD TECNIQUE super ganza
+        
+        V_x=2
+        V_y=0.001*x_perp
+
+        cmd.roll=V_x*math.cos(rad_angle)+V_y*math.sin(rad_angle)
+        cmd.pitch=-V_x*math.sin(rad_angle)+V_y*math.cos(rad_angle)
+        cmd.yaw= -10*rad_angle
+        cmd.throttle = P_gain_throttle*(altitude - ground_distance) + D_gain_throttle*(ground_distance-old_ground_distance) + I_gain_throttle*throttle_integral
+        
+        if(abs(cmd.throttle)>4): # MAX throttle DJI= 4m/s
+            cmd.throttle=4*(abs(cmd.throttle)/cmd.throttle)
+
+        if(abs(cmd.yaw)>30): # MAX yaw DJI= 100 degree/s 
+            cmd.yaw=30*(abs(cmd.yaw)/cmd.yaw)
+        
+        if(abs(cmd.roll)>5): # MAX roll/pitch DJI= 15m/s 
+            cmd.roll=5*(abs(cmd.roll)/cmd.roll)
+
+        if(abs(cmd.pitch)>5): # MAX roll/pitch DJI= 15m/s 
+            cmd.pitch=5*(abs(cmd.pitch)/cmd.pitch)
+        
 
         if(rail_detected==42): # It means rails not detected, so keep the drone still
             cmd.yaw = 0
@@ -112,7 +165,12 @@ def main():
             cmd.roll = 0
 
         command_pub.publish(cmd)
-        print("rail detected: ",(rail_detected!=42)," x:",x,", y:",y,", angle:",angle,", ground distance:",ground_distance)
+        print("\nrail detected: ",(rail_detected!=42)," x:",x,", y:",y,", angle:",angle,", ground distance:",ground_distance)
+        print("commands: ")
+        print("yaw: ", cmd.yaw)
+        print("pitch: ",cmd.pitch)
+        print("roll: ", cmd.roll)
+        print("throttle: ", cmd.throttle)
         rate.sleep()
 
 if __name__ == "__main__":
