@@ -93,12 +93,12 @@ def main():
         else:
             x_perp=-math.sqrt(x_line*x_line+y_line*y_line)
         
-        V_x=2             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
+        V_x=0.1             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
         V_y=0.001*x_perp
 
         cmd.roll=V_x*math.cos(rad_angle)+V_y*math.sin(rad_angle)
         cmd.pitch=-V_x*math.sin(rad_angle)+V_y*math.cos(rad_angle)
-        cmd.yaw= -10*rad_angle
+        cmd.yaw= -20*rad_angle
         cmd.throttle = P_gain_throttle*(altitude - ground_distance) + D_gain_throttle*(ground_distance-old_ground_distance) + I_gain_throttle*throttle_integral
         
         if(abs(cmd.throttle)>4): # MAX throttle DJI= 4m/s
