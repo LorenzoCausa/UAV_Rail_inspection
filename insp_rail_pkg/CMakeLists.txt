@@ -50,6 +50,7 @@ include_directories(
    scripts/drone_controller_simulation.py
    scripts/PID_drone_controller.py
    scripts/Lyapunov_drone_controller.py
+   scripts/odometry_lyap.py
    
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
