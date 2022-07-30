@@ -73,17 +73,17 @@ def callback_loc(pose):
     im_height,im_width,_=cv_image.shape
     cv_bridge=CvBridge()
 
-    cv_image = cv2.circle(cv_image, (round(im_width/2), round(im_height/2)), radius=10, color=(255, 255, 0), thickness=-1)
+    cv_image = cv2.circle(cv_image, (int(im_width/2), int(im_height/2)), radius=10, color=(255, 255, 0), thickness=-1)
 
     x_line_image=((x_line/1000)+0.5)*im_width
     y_line_image=((y_line/1000)+0.5)*im_height
-    cv_image = cv2.circle(cv_image, (round(x_line_image), round(y_line_image)), radius=10, color=(255, 255, 0), thickness=-1)
+    cv_image = cv2.circle(cv_image, (int(x_line_image), int(y_line_image)), radius=10, color=(255, 255, 0), thickness=-1)
 
-    cv_image=cv2.line(cv_image, (round(x_line_image),round(y_line_image)), (round(im_width/2),round(im_height/2)), (255,255,0),4)
+    cv_image=cv2.line(cv_image, (int(x_line_image),int(y_line_image)), (int(im_width/2),int(im_height/2)), (255,255,0),4)
 
     box_center_x=((x/1000)+0.5)*im_width
     box_center_y=((y/1000)+0.5)*im_height
-    cv_image = cv2.circle(cv_image, (round(box_center_x), round(box_center_y)), radius=10, color=(255, 255, 0), thickness=-1)
+    cv_image = cv2.circle(cv_image, (int(box_center_x), int(box_center_y)), radius=10, color=(255, 255, 0), thickness=-1)
 
     C=y_line_image-m*x_line_image
     y2_image=0
@@ -96,7 +96,13 @@ def callback_loc(pose):
         x2_image=-1000000
         x3_image=1000000
 
-    cv_image=cv2.line(cv_image, (round(x2_image),round(y2_image)), (round(x3_image),round(y3_image)), (255,255,0),4)
+    cv_image=cv2.line(cv_image, (int(x2_image),int(y2_image)), (int(x3_image),int(y3_image)), (255,255,0),4)
+
+
+    #print("x_line:",x_line," y_line:",y_line," x:",x," y:",y," m:",m," x_line_image:",x_line_image," y_line_image:",y_line_image)
+
+    if(x_line!=0 and y_line!=0):
+        print("perpendicolarita:",(-y_line/x_line)*m)
 
     pub_image.publish(cv_bridge.cv2_to_imgmsg(cv_image, 'bgr8'))
 
