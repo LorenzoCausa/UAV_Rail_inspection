@@ -38,7 +38,7 @@ yaw_integral=0
 throttle_integral=0
 pitch_integral=0
 
-altitude=10 # meters
+altitude=2 # meters
 
 # FUNCTIONs
 def update_olds():
@@ -83,7 +83,7 @@ def callback_ground(distance):
     ground_distance=distance.data
 
 def main():
-    rospy.init_node('lyapunov_drone_controller', anonymous=False)
+    rospy.init_node('odometry_lyapunov_drone_controller', anonymous=False)
     rospy.Subscriber("localization", Pose, callback_loc,queue_size=1)
     rospy.Subscriber("ground_distance", Float32, callback_ground,queue_size=1)
     command_pub=rospy.Publisher("command", Drone_cmd, queue_size=1) #maybe is better to use cmd_vel
@@ -97,12 +97,12 @@ def main():
         global angle,x_perp
         rad_angle=math.radians(angle)
         
-        V_x=0.5             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
+        V_x=0.3             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
         V_y=0.001*x_perp
 
         cmd.roll=V_x*math.cos(rad_angle)+V_y*math.sin(rad_angle)
         cmd.pitch=-V_x*math.sin(rad_angle)+V_y*math.cos(rad_angle)
-        cmd.yaw= -10*rad_angle
+        cmd.yaw= -0.1*angle
         cmd.throttle = P_gain_throttle*(altitude - ground_distance) + D_gain_throttle*(ground_distance-old_ground_distance) + I_gain_throttle*throttle_integral
         
         if(abs(cmd.throttle)>4): # MAX throttle DJI= 4m/s

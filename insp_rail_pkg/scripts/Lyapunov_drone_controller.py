@@ -16,6 +16,9 @@ angle=float(0)
 ground_distance=float(0)
 rail_detected=float(0)
 
+rad_angle=float(0)
+x_perp=float(0)
+
 old_x=float(0)
 old_y=float(0)
 old_angle=float(0)
@@ -56,11 +59,27 @@ def update_integrals(yaw_e, throttle_e,pitch_e):
 
 # SUBSCRIBERs CALLBACK
 def callback_loc(pose):
-    global x,y,angle,rail_detected
+    global x,y,angle,rail_detected,rad_angle,x_perp
     x=pose.position.x
     y=pose.position.y
     angle=pose.orientation.z
     rail_detected=pose.orientation.w
+
+    rad_angle=math.radians(angle)
+
+    if(angle==0):
+        x_line=x
+        y_line=0
+
+    else:
+        m=math.tan(-math.pi/2-rad_angle)
+        x_line=m*(m*x-y)/(1+m*m)
+        y_line=-(m*x-y)/(1+m*m)
+
+    if(x_line>0):
+        x_perp=math.sqrt(x_line*x_line+y_line*y_line)
+    else:
+        x_perp=-math.sqrt(x_line*x_line+y_line*y_line)
 
 def callback_ground(distance):
     global ground_distance
@@ -77,28 +96,12 @@ def main():
 
     while not rospy.is_shutdown():
         
-        rad_angle=math.radians(angle)
-
-        if(angle==0):
-            x_line=x
-            y_line=0
-
-        else:
-            m=math.tan(-math.pi/2-rad_angle)
-            x_line=m*(m*x-y)/(1+m*m)
-            y_line=-(m*x-y)/(1+m*m)
-
-        if(x_line>0):
-            x_perp=math.sqrt(x_line*x_line+y_line*y_line)
-        else:
-            x_perp=-math.sqrt(x_line*x_line+y_line*y_line)
-        
-        V_x=0.1             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
+        V_x=0.3             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
         V_y=0.001*x_perp
 
         cmd.roll=V_x*math.cos(rad_angle)+V_y*math.sin(rad_angle)
         cmd.pitch=-V_x*math.sin(rad_angle)+V_y*math.cos(rad_angle)
-        cmd.yaw= -20*rad_angle
+        cmd.yaw= -0.1*angle
         cmd.throttle = P_gain_throttle*(altitude - ground_distance) + D_gain_throttle*(ground_distance-old_ground_distance) + I_gain_throttle*throttle_integral
         
         if(abs(cmd.throttle)>4): # MAX throttle DJI= 4m/s
