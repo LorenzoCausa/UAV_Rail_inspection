@@ -48,14 +48,19 @@ def callback(startImg):
 
 def callback_loc(pose):
     global x,y,angle,rail_detected,rad_angle,x_perp,cv_image
+    im_height,im_width,_=cv_image.shape
+
     x=pose.position.x
     y=pose.position.y
     angle=pose.orientation.z
     rail_detected=pose.orientation.w
     m=100000
 
-    rad_angle=math.radians(angle)
+    x=im_width*x/1000
+    y=im_height*y/1000
 
+    rad_angle=math.radians(angle)
+      
     if(angle==0):
         x_line=x
         y_line=0
@@ -70,22 +75,21 @@ def callback_loc(pose):
     else:
         x_perp=-math.sqrt(x_line*x_line+y_line*y_line)
 
-    im_height,im_width,_=cv_image.shape
     cv_bridge=CvBridge()
 
     cv_image = cv2.circle(cv_image, (int(im_width/2), int(im_height/2)), radius=10, color=(255, 255, 0), thickness=-1)
 
-    x_line_image=((x_line/1000)+0.5)*im_width
-    y_line_image=((y_line/1000)+0.5)*im_height
+    x_line_image=(x_line)+0.5*im_width
+    y_line_image=(y_line)+0.5*im_height
     cv_image = cv2.circle(cv_image, (int(x_line_image), int(y_line_image)), radius=10, color=(255, 255, 0), thickness=-1)
 
     cv_image=cv2.line(cv_image, (int(x_line_image),int(y_line_image)), (int(im_width/2),int(im_height/2)), (255,255,0),4)
 
-    box_center_x=((x/1000)+0.5)*im_width
-    box_center_y=((y/1000)+0.5)*im_height
+    box_center_x=(x)+0.5*im_width
+    box_center_y=(y)+0.5*im_height
     cv_image = cv2.circle(cv_image, (int(box_center_x), int(box_center_y)), radius=10, color=(255, 255, 0), thickness=-1)
 
-    C=y_line_image-m*x_line_image
+    C=box_center_y-m*box_center_x
     y2_image=0
     y3_image=im_height
 

@@ -252,7 +252,10 @@ def main():
 
             mask=getMask(outputs)
             getOrientedBoxes(mask,True)
-            showSegmentation(v,outputs)
+            segmentation=showSegmentation(v,outputs)
+            if(save_frames>0):
+                    image_name="image"+str(save_frames)+".jpg"
+                    print(cv2.imwrite(os.path.join(ROOT,image_name), segmentation.get_image()[:, :, ::-1]))
             print("img dimension: ",img.shape)
             print("total time: ", time.time()-now)
             cv2.waitKey(0)
@@ -289,7 +292,8 @@ def main():
 
                 mask=getMask(outputs)
                 getOrientedBoxes(mask,True)
-                showSegmentation(v,outputs)
+                segmentation=showSegmentation(v,outputs)
+                
                 print(files[i])
                 print("img dimension: ",img.shape)
                 print("total time: ", time.time()-now)
