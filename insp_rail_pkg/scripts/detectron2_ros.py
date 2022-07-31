@@ -50,6 +50,7 @@ def parse_opt():
     parser.add_argument('--show_segmentation', nargs='+', type=int, default=[0], help='1 or 0(True or False), publish the segmentation or not, without segmentation is faster')
     parser.add_argument('--save_frames', nargs='+', type=int, default=[0], help='put anything put 0 to save segmentation, show_segmentation must be True')
     parser.add_argument('--resize', nargs='+', type=float, default=[1], help='To change resolution of the image between [0, 1]')
+    parser.add_argument('--crop', nargs='+', type=int, default=[1], help='1 to crop a square image, 0 to keep the original without crop')
     opt = parser.parse_args()
     return opt
 
@@ -200,6 +201,7 @@ def main():
     args= parse_opt()
     save_frames=args.save_frames[0]
     resize=args.resize[0]
+    crop=args.crop[0]
     cfg = get_cfg()
     # add project-specific config (e.g., TensorMask) here if you're not running a model in detectron2's core library
     cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
@@ -228,6 +230,13 @@ def main():
             img = cv2.imread(args.source[0])
             # resize image
             im_height,im_width,_=img.shape
+            if(crop==1):
+                if(im_width>im_height):
+                    img=img[0:int(im_height),int((im_width-im_height)/2):int(im_width-(im_width-im_height)/2)]
+                else:
+                    img=img[int((im_height-im_width)/2):int(im_height-(im_height-im_width)/2),0:int(im_width)]
+                im_height,im_width,_=img.shape
+    
             dsize = (int(im_width*resize), int(im_height*resize))
             img = cv2.resize(img, dsize, interpolation = cv2.INTER_AREA)
             #cv2.imshow("my image",img)
@@ -260,6 +269,13 @@ def main():
                 img = cv2.imread(filename)
                 # resize image
                 im_height,im_width,_=img.shape
+                if(crop==1):
+                    if(im_width>im_height):
+                        img=img[0:int(im_height),int((im_width-im_height)/2):int(im_width-(im_width-im_height)/2)]
+                    else:
+                        img=img[int((im_height-im_width)/2):int(im_height-(im_height-im_width)/2),0:int(im_width)]
+                    im_height,im_width,_=img.shape
+                    
                 dsize = (int(im_width*resize), int(im_height*resize))
                 img = cv2.resize(img, dsize, interpolation = cv2.INTER_AREA)
                 now = time.time()   
@@ -293,9 +309,18 @@ def main():
         while not rospy.is_shutdown():
             now = time.time() 
 
-            im_height,im_width,_=cv_image.shape
+            img=cv_image
+            im_height,im_width,_=img.shape
+
+            if(crop==1):
+                if(im_width>im_height):
+                    img=img[0:int(im_height),int((im_width-im_height)/2):int(im_width-(im_width-im_height)/2)]
+                else:
+                    img=img[int((im_height-im_width)/2):int(im_height-(im_height-im_width)/2),0:int(im_width)]
+                im_height,im_width,_=img.shape
+
             dsize = (int(im_width*resize), int(im_height*resize))
-            img = cv2.resize(cv_image, dsize, interpolation = cv2.INTER_AREA)
+            img = cv2.resize(img, dsize, interpolation = cv2.INTER_AREA)
 
             outputs = predictor(img)
             mask=getMask(outputs)
