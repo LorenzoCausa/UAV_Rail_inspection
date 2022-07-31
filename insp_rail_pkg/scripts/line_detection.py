@@ -36,8 +36,6 @@ rail_detected=float(0)
 rad_angle=float(0)
 x_perp=float(0)
 pub_image=None
-# FUNCTIONS
-
 
 # SUBSCRIBERs CALLBACK
 def callback(startImg):

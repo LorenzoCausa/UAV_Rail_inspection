@@ -64,6 +64,11 @@ def callback_loc(pose):
     y=pose.position.y
     angle=pose.orientation.z
     rail_detected=pose.orientation.w
+    im_width=pose.orientation.x
+    im_height=pose.orientation.y
+
+    x=im_width*x/1000
+    y=im_height*y/1000
 
     rad_angle=math.radians(angle)
 
@@ -81,6 +86,9 @@ def callback_loc(pose):
     else:
         x_perp=-math.sqrt(x_line*x_line+y_line*y_line)
 
+    x_perp=x_perp/im_width
+
+
 def callback_ground(distance):
     global ground_distance
     ground_distance=distance.data
@@ -97,7 +105,7 @@ def main():
     while not rospy.is_shutdown():
         
         V_x=0.3             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
-        V_y=0.001*x_perp
+        V_y=1*x_perp
 
         cmd.roll=V_x*math.cos(rad_angle)+V_y*math.sin(rad_angle)
         cmd.pitch=-V_x*math.sin(rad_angle)+V_y*math.cos(rad_angle)
@@ -129,6 +137,7 @@ def main():
         print("pitch: ",cmd.pitch)
         print("roll: ", cmd.roll)
         print("throttle: ", cmd.throttle)
+        #print("x_perp: ",x_perp)
         rate.sleep()
 
 if __name__ == "__main__":

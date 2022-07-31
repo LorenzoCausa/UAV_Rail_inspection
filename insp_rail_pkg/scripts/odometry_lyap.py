@@ -63,7 +63,14 @@ def callback_loc(pose):
     angle=pose.orientation.z
     rail_detected=pose.orientation.w
 
+    im_width=pose.orientation.x
+    im_height=pose.orientation.y
+
+    x=im_width*x/1000
+    y=im_height*y/1000
+
     rad_angle=math.radians(angle)
+
     if(angle==0):
             x_line=x
             y_line=0
@@ -77,6 +84,8 @@ def callback_loc(pose):
         x_perp=math.sqrt(x_line*x_line+y_line*y_line)
     else:
         x_perp=-math.sqrt(x_line*x_line+y_line*y_line)
+
+    x_perp=x_perp/im_width
 
 def callback_ground(distance):
     global ground_distance
@@ -98,7 +107,7 @@ def main():
         rad_angle=math.radians(angle)
         
         V_x=0.3             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
-        V_y=0.001*x_perp
+        V_y=0.5*x_perp
 
         cmd.roll=V_x*math.cos(rad_angle)+V_y*math.sin(rad_angle)
         cmd.pitch=-V_x*math.sin(rad_angle)+V_y*math.cos(rad_angle)
@@ -133,7 +142,7 @@ def main():
 
         # ODOMETRY
         angle=angle+cmd.yaw/f
-        x_perp=x_perp-(V_y/f)*500/ground_distance
+        x_perp=x_perp-(V_y/f)*0.5/ground_distance
 
         rate.sleep()
 

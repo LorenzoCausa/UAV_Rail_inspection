@@ -349,12 +349,16 @@ def main():
                 loc.position.x=center[0]
                 loc.position.y=center[1]
                 loc.position.z=altitude
+                loc.orientation.x=im_width
+                loc.orientation.y=im_height
                 loc.orientation.z=angle
                 pub_loc.publish(loc)
 
             else:
                 loc=Pose()
                 loc.orientation.w = 42 # Just a way to say that no rail was detected
+                loc.orientation.x=im_width
+                loc.orientation.y=im_height
                 pub_loc.publish(loc)
 
             print("img dimension: ",img.shape)
