@@ -91,7 +91,7 @@ def callback_loc(pose):
     y2_image=0
     y3_image=im_height
 
-    if(m!=0):
+    if(abs(m)>0.00000001):
         x2_image=(y2_image-C)/m
         x3_image=(y3_image-C)/m
     else:
