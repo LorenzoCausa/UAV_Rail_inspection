@@ -142,7 +142,8 @@ def main():
 
         # ODOMETRY
         angle=angle+cmd.yaw/f
-        x_perp=x_perp-(V_y/f)*0.5/ground_distance
+        if(ground_distance>0.1):
+            x_perp=x_perp-(V_y/f)*0.5/ground_distance
 
         rate.sleep()
 
