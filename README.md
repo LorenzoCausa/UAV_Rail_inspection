@@ -28,5 +28,5 @@ LINK ALLA TESI
 
 This repo is to be used with the rest of the thesis project
 
- - The ROS package for the interface, control and recognition of the rail: <https://github.com/LorenzoCausa/UAV_Rail_inspection>
+ - The coppelia simulation: <https://github.com/LorenzoCausa/coppelia_rail_simulation> 
  - he bridge application between Linux computer and the drone controller: <https://github.com/LorenzoCausa/bridge_DJI_ROS>
