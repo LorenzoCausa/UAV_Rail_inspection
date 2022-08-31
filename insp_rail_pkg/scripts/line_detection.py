@@ -10,6 +10,7 @@ import math
 from cv_bridge import CvBridge
 from sensor_msgs.msg import Image as SensImage
 from geometry_msgs.msg import Pose 
+from std_msgs.msg import Float32 
 
 import argparse
 import os
@@ -36,6 +37,7 @@ rail_detected=float(0)
 rad_angle=float(0)
 x_perp=float(0)
 pub_image=None
+pub_perp_d=None
 
 # SUBSCRIBERs CALLBACK
 def callback(startImg):
@@ -107,14 +109,16 @@ def callback_loc(pose):
         print("perpendicolarita:",(-y_line/x_line)*m)
 
     pub_image.publish(cv_bridge.cv2_to_imgmsg(cv_image, 'bgr8'))
+    pub_perp_d.publish(100*x_perp/im_width)
 
 def main():
-    global pub_image
+    global pub_image,pub_perp_d
     rospy.init_node('line_detection', anonymous=False)
     
     rospy.Subscriber('boxes_and_mask', SensImage,callback, queue_size=1)
     rospy.Subscriber("localization", Pose, callback_loc,queue_size=1)
     pub_image = rospy.Publisher('line_to_follow', SensImage, queue_size=1)
+    pub_perp_d=rospy.Publisher('perpendicular_distance', Float32, queue_size=1)
 
     print("started")
 
