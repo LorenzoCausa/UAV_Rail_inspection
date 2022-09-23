@@ -117,7 +117,7 @@ def main():
 
     while not rospy.is_shutdown():
         
-        V_x=0.3             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
+        V_x=2             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
         V_y=1*x_perp
 
         cmd.roll=V_x*math.cos(rad_angle)+V_y*math.sin(rad_angle)
@@ -156,7 +156,7 @@ def main():
 
         #----------------------CONTROL ERROR FILE-----------------------------------------
         file_txt=open(os.path.join(ROOT,"control_errors"), "a")
-        text=("command: \nyaw:\n" + str(cmd.yaw) +"\npitch:\n" + str(cmd.pitch) + "\nroll:\n" + str(cmd.roll) + "\nthrottle:\n" + str(cmd.throttle) + "\nx_perp:\n" + str(x_perp) + "\n\n")
+        text=("control errors: \nAngle:\n" + str(angle) + "\nPerpendicular_distance:\n" + str(x_perp) + "\nAltitude\n" + str(ground_distance) + "\n\n")
         file_txt.write(text)
         file_txt.close()
         #-------------------------------------------------------------------------------

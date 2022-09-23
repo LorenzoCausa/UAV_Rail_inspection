@@ -1,1 +1,2800 @@
-CONTROL_ERRORS_FILE
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+0.0
+Altitude
+0.0
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+0.0
+Altitude
+3.670999050140381
+
+control errors: 
+Angle:
+-45.0
+Perpendicular_distance:
+0.15061374439273462
+Altitude
+3.6709961891174316
+
+control errors: 
+Angle:
+-45.0
+Perpendicular_distance:
+0.15061374439273462
+Altitude
+3.6709976196289062
+
+control errors: 
+Angle:
+-45.0
+Perpendicular_distance:
+0.15061374439273462
+Altitude
+3.679016351699829
+
+control errors: 
+Angle:
+-45.0
+Perpendicular_distance:
+0.15061374439273462
+Altitude
+3.722541093826294
+
+control errors: 
+Angle:
+-45.0
+Perpendicular_distance:
+0.15061374439273462
+Altitude
+3.755920886993408
+
+control errors: 
+Angle:
+-46.0
+Perpendicular_distance:
+0.1661503360229273
+Altitude
+3.810187578201294
+
+control errors: 
+Angle:
+-48.0
+Perpendicular_distance:
+0.1747291130159486
+Altitude
+3.675196409225464
+
+control errors: 
+Angle:
+-48.0
+Perpendicular_distance:
+0.1747291130159486
+Altitude
+3.5766196250915527
+
+control errors: 
+Angle:
+-47.0
+Perpendicular_distance:
+0.17647155638805523
+Altitude
+3.4568982124328613
+
+control errors: 
+Angle:
+-46.0
+Perpendicular_distance:
+0.17929590386806027
+Altitude
+3.3080105781555176
+
+control errors: 
+Angle:
+-46.0
+Perpendicular_distance:
+0.17929590386806027
+Altitude
+3.195000410079956
+
+control errors: 
+Angle:
+-45.0
+Perpendicular_distance:
+0.1774838020778234
+Altitude
+3.0931038856506348
+
+control errors: 
+Angle:
+-44.0
+Perpendicular_distance:
+0.1653601633598572
+Altitude
+2.997955083847046
+
+control errors: 
+Angle:
+-44.0
+Perpendicular_distance:
+0.1653601633598572
+Altitude
+2.9101998805999756
+
+control errors: 
+Angle:
+-42.0
+Perpendicular_distance:
+0.15660553659271084
+Altitude
+2.8206334114074707
+
+control errors: 
+Angle:
+-42.0
+Perpendicular_distance:
+0.15660553659271084
+Altitude
+2.6423351764678955
+
+control errors: 
+Angle:
+-41.0
+Perpendicular_distance:
+0.13330763706234788
+Altitude
+2.633111000061035
+
+control errors: 
+Angle:
+-40.0
+Perpendicular_distance:
+0.12181958721429609
+Altitude
+2.4703211784362793
+
+control errors: 
+Angle:
+-40.0
+Perpendicular_distance:
+0.12181958721429609
+Altitude
+2.465587854385376
+
+control errors: 
+Angle:
+-39.0
+Perpendicular_distance:
+0.1039221907805405
+Altitude
+2.3389248847961426
+
+control errors: 
+Angle:
+-38.0
+Perpendicular_distance:
+0.0885290656929694
+Altitude
+2.2694289684295654
+
+control errors: 
+Angle:
+-38.0
+Perpendicular_distance:
+0.0885290656929694
+Altitude
+2.2429840564727783
+
+control errors: 
+Angle:
+-36.0
+Perpendicular_distance:
+0.07544681585938784
+Altitude
+2.1323025226593018
+
+control errors: 
+Angle:
+-34.0
+Perpendicular_distance:
+0.06645953076151843
+Altitude
+2.0642192363739014
+
+control errors: 
+Angle:
+-34.0
+Perpendicular_distance:
+0.06645953076151843
+Altitude
+2.0946102142333984
+
+control errors: 
+Angle:
+-34.0
+Perpendicular_distance:
+0.044768028917972255
+Altitude
+1.982147455215454
+
+control errors: 
+Angle:
+-33.0
+Perpendicular_distance:
+0.0305730200406572
+Altitude
+1.9395133256912231
+
+control errors: 
+Angle:
+-33.0
+Perpendicular_distance:
+0.0305730200406572
+Altitude
+1.9868746995925903
+
+control errors: 
+Angle:
+-32.0
+Perpendicular_distance:
+0.014416817634659242
+Altitude
+1.8907362222671509
+
+control errors: 
+Angle:
+-31.0
+Perpendicular_distance:
+0.01234247143562163
+Altitude
+1.8730173110961914
+
+control errors: 
+Angle:
+-31.0
+Perpendicular_distance:
+0.01234247143562163
+Altitude
+1.935433268547058
+
+control errors: 
+Angle:
+-30.0
+Perpendicular_distance:
+0.002758330249197703
+Altitude
+1.9248007535934448
+
+control errors: 
+Angle:
+-30.0
+Perpendicular_distance:
+0.002758330249197703
+Altitude
+1.9178595542907715
+
+control errors: 
+Angle:
+-30.0
+Perpendicular_distance:
+0.0015621778264910719
+Altitude
+1.839967966079712
+
+control errors: 
+Angle:
+-29.0
+Perpendicular_distance:
+-0.0028990457679980777
+Altitude
+1.9118282794952393
+
+control errors: 
+Angle:
+-29.0
+Perpendicular_distance:
+-0.0028990457679980777
+Altitude
+1.912183165550232
+
+control errors: 
+Angle:
+-29.0
+Perpendicular_distance:
+9.81195347994494e-06
+Altitude
+1.8478341102600098
+
+control errors: 
+Angle:
+-30.0
+Perpendicular_distance:
+0.001294228634059949
+Altitude
+1.9174317121505737
+
+control errors: 
+Angle:
+-30.0
+Perpendicular_distance:
+0.001294228634059949
+Altitude
+1.9219627380371094
+
+control errors: 
+Angle:
+-30.0
+Perpendicular_distance:
+0.013686533479473212
+Altitude
+1.8526153564453125
+
+control errors: 
+Angle:
+-31.0
+Perpendicular_distance:
+0.0229669197973951
+Altitude
+1.932867407798767
+
+control errors: 
+Angle:
+-31.0
+Perpendicular_distance:
+0.0229669197973951
+Altitude
+1.8647269010543823
+
+control errors: 
+Angle:
+-31.0
+Perpendicular_distance:
+0.03993735696231935
+Altitude
+1.946120023727417
+
+control errors: 
+Angle:
+-32.0
+Perpendicular_distance:
+0.052578981961698405
+Altitude
+1.9542837142944336
+
+control errors: 
+Angle:
+-32.0
+Perpendicular_distance:
+0.052578981961698405
+Altitude
+1.8857468366622925
+
+control errors: 
+Angle:
+-32.0
+Perpendicular_distance:
+0.06710125162905439
+Altitude
+1.9684417247772217
+
+control errors: 
+Angle:
+-33.0
+Perpendicular_distance:
+0.08004464686644726
+Altitude
+1.9764851331710815
+
+control errors: 
+Angle:
+-33.0
+Perpendicular_distance:
+0.08004464686644726
+Altitude
+1.9077873229980469
+
+control errors: 
+Angle:
+-33.0
+Perpendicular_distance:
+0.09455265402360406
+Altitude
+1.9893724918365479
+
+control errors: 
+Angle:
+-33.0
+Perpendicular_distance:
+0.09455265402360406
+Altitude
+1.993485927581787
+
+control errors: 
+Angle:
+-34.0
+Perpendicular_distance:
+0.09879199609116504
+Altitude
+1.9231624603271484
+
+control errors: 
+Angle:
+-34.0
+Perpendicular_distance:
+0.10608100740158691
+Altitude
+2.0039446353912354
+
+control errors: 
+Angle:
+-34.0
+Perpendicular_distance:
+0.10608100740158691
+Altitude
+1.9310451745986938
+
+control errors: 
+Angle:
+-36.0
+Perpendicular_distance:
+0.11141011712209553
+Altitude
+2.009979486465454
+
+control errors: 
+Angle:
+-37.0
+Perpendicular_distance:
+0.1117256865443889
+Altitude
+1.9388384819030762
+
+control errors: 
+Angle:
+-37.0
+Perpendicular_distance:
+0.1117256865443889
+Altitude
+1.9406815767288208
+
+control errors: 
+Angle:
+-39.0
+Perpendicular_distance:
+0.1198367973693368
+Altitude
+1.9466631412506104
+
+control errors: 
+Angle:
+-38.0
+Perpendicular_distance:
+0.11475552584564003
+Altitude
+1.956363558769226
+
+control errors: 
+Angle:
+-38.0
+Perpendicular_distance:
+0.11475552584564003
+Altitude
+1.9512996673583984
+
+control errors: 
+Angle:
+-38.0
+Perpendicular_distance:
+0.13233784734106754
+Altitude
+2.030261516571045
+
+control errors: 
+Angle:
+-39.0
+Perpendicular_distance:
+0.13334817672219765
+Altitude
+2.0349912643432617
+
+control errors: 
+Angle:
+-39.0
+Perpendicular_distance:
+0.13334817672219765
+Altitude
+1.9612013101577759
+
+control errors: 
+Angle:
+-37.0
+Perpendicular_distance:
+0.13112381995981812
+Altitude
+2.038723945617676
+
+control errors: 
+Angle:
+-37.0
+Perpendicular_distance:
+0.11492022858457807
+Altitude
+1.966201901435852
+
+control errors: 
+Angle:
+-37.0
+Perpendicular_distance:
+0.11492022858457807
+Altitude
+2.0433130264282227
+
+control errors: 
+Angle:
+-36.0
+Perpendicular_distance:
+0.10919779970127078
+Altitude
+2.044145345687866
+
+control errors: 
+Angle:
+-35.0
+Perpendicular_distance:
+0.07659326622125201
+Altitude
+1.9694706201553345
+
+control errors: 
+Angle:
+-35.0
+Perpendicular_distance:
+0.07659326622125201
+Altitude
+2.0453670024871826
+
+control errors: 
+Angle:
+-35.0
+Perpendicular_distance:
+0.06217653025246326
+Altitude
+2.0449016094207764
+
+control errors: 
+Angle:
+-35.0
+Perpendicular_distance:
+0.06217653025246326
+Altitude
+1.9695188999176025
+
+control errors: 
+Angle:
+-33.0
+Perpendicular_distance:
+0.029811260851413335
+Altitude
+2.0440738201141357
+
+control errors: 
+Angle:
+-32.0
+Perpendicular_distance:
+0.008585932994261004
+Altitude
+1.9674525260925293
+
+control errors: 
+Angle:
+-32.0
+Perpendicular_distance:
+0.008585932994261004
+Altitude
+1.9672843217849731
+
+control errors: 
+Angle:
+-29.0
+Perpendicular_distance:
+-0.007976388851087786
+Altitude
+2.0414557456970215
+
+control errors: 
+Angle:
+-28.0
+Perpendicular_distance:
+-0.03981014451244762
+Altitude
+1.9654700756072998
+
+control errors: 
+Angle:
+-28.0
+Perpendicular_distance:
+-0.03981014451244762
+Altitude
+2.0411086082458496
+
+control errors: 
+Angle:
+-24.0
+Perpendicular_distance:
+-0.06354144539190626
+Altitude
+1.9655264616012573
+
+control errors: 
+Angle:
+-23.0
+Perpendicular_distance:
+-0.09207688200617642
+Altitude
+2.0416810512542725
+
+control errors: 
+Angle:
+-23.0
+Perpendicular_distance:
+-0.09207688200617642
+Altitude
+2.0415914058685303
+
+control errors: 
+Angle:
+-19.0
+Perpendicular_distance:
+-0.11939853690442676
+Altitude
+1.9662531614303589
+
+control errors: 
+Angle:
+-18.0
+Perpendicular_distance:
+-0.1407563644116827
+Altitude
+2.0420968532562256
+
+control errors: 
+Angle:
+-18.0
+Perpendicular_distance:
+-0.1407563644116827
+Altitude
+2.041487455368042
+
+control errors: 
+Angle:
+-15.0
+Perpendicular_distance:
+-0.16208607012558196
+Altitude
+2.040149211883545
+
+control errors: 
+Angle:
+-14.0
+Perpendicular_distance:
+-0.19381983150347695
+Altitude
+2.0396714210510254
+
+control errors: 
+Angle:
+-14.0
+Perpendicular_distance:
+-0.19381983150347695
+Altitude
+2.0370430946350098
+
+control errors: 
+Angle:
+-10.0
+Perpendicular_distance:
+-0.204028853051194
+Altitude
+2.0353569984436035
+
+control errors: 
+Angle:
+-10.0
+Perpendicular_distance:
+-0.204028853051194
+Altitude
+2.033088207244873
+
+control errors: 
+Angle:
+-9.0
+Perpendicular_distance:
+-0.21926681161212055
+Altitude
+2.0301549434661865
+
+control errors: 
+Angle:
+-5.0
+Perpendicular_distance:
+-0.22089375574812453
+Altitude
+2.0275585651397705
+
+control errors: 
+Angle:
+-5.0
+Perpendicular_distance:
+-0.22089375574812453
+Altitude
+2.025210380554199
+
+control errors: 
+Angle:
+-5.0
+Perpendicular_distance:
+-0.21708328844125285
+Altitude
+2.0222089290618896
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.20998546838927945
+Altitude
+2.0205860137939453
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.20998546838927945
+Altitude
+2.017725944519043
+
+control errors: 
+Angle:
+-3.0
+Perpendicular_distance:
+-0.2135497125687499
+Altitude
+2.0147953033447266
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.21
+Altitude
+2.0132627487182617
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.21
+Altitude
+2.010434865951538
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.19909185818118283
+Altitude
+2.009556293487549
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.18295467580718233
+Altitude
+1.9324491024017334
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.18295467580718233
+Altitude
+2.00569224357605
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.156
+Altitude
+1.9305229187011719
+
+control errors: 
+Angle:
+3.0
+Perpendicular_distance:
+-0.14375031704841568
+Altitude
+1.929531455039978
+
+control errors: 
+Angle:
+3.0
+Perpendicular_distance:
+-0.14375031704841568
+Altitude
+2.0045671463012695
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.114982484942985
+Altitude
+1.9313832521438599
+
+control errors: 
+Angle:
+3.0
+Perpendicular_distance:
+-0.10669635235001056
+Altitude
+1.933048129081726
+
+control errors: 
+Angle:
+3.0
+Perpendicular_distance:
+-0.10669635235001056
+Altitude
+2.0093162059783936
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.08700420188504332
+Altitude
+1.9381927251815796
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.08700420188504332
+Altitude
+1.9401321411132812
+
+control errors: 
+Angle:
+2.0
+Perpendicular_distance:
+-0.07798738400419196
+Altitude
+2.017508029937744
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.05804352353838254
+Altitude
+1.9467071294784546
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.05804352353838254
+Altitude
+2.0240378379821777
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.048010141773944054
+Altitude
+2.027501344680786
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.03508193136266011
+Altitude
+1.9544565677642822
+
+control errors: 
+Angle:
+1.0
+Perpendicular_distance:
+-0.03508193136266011
+Altitude
+2.0324630737304688
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.023
+Altitude
+1.9585427045822144
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.019
+Altitude
+1.959598422050476
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.019
+Altitude
+2.0367698669433594
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.011
+Altitude
+1.9624546766281128
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.009
+Altitude
+1.983244776725769
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.009
+Altitude
+1.9647389650344849
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.009
+Altitude
+1.9646704196929932
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.008981176849970237
+Altitude
+1.9819093942642212
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.008981176849970237
+Altitude
+1.9681971073150635
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.011
+Altitude
+1.9686626195907593
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.011
+Altitude
+1.9828392267227173
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.013015472443470368
+Altitude
+1.9723414182662964
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.010945967427408452
+Altitude
+1.9742767810821533
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.010945967427408452
+Altitude
+2.0514438152313232
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.014997715427345869
+Altitude
+1.9779000282287598
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.01699741081765865
+Altitude
+2.0544776916503906
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.01699741081765865
+Altitude
+2.056001901626587
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.014997715427345869
+Altitude
+1.981890082359314
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.020944444378972363
+Altitude
+2.0578794479370117
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.020944444378972363
+Altitude
+1.9822971820831299
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.01699741081765865
+Altitude
+2.0570271015167236
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.016979958411221366
+Altitude
+1.9819799661636353
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.016979958411221366
+Altitude
+2.0556790828704834
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.025
+Altitude
+1.9799026250839233
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.025
+Altitude
+1.978717565536499
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.022979044582159717
+Altitude
+2.052196979522705
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.027
+Altitude
+1.9753856658935547
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.027
+Altitude
+1.9741812944412231
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.031
+Altitude
+2.048217296600342
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.031
+Altitude
+1.9719816446304321
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.031
+Altitude
+2.046330451965332
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.033
+Altitude
+2.0458152294158936
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.031
+Altitude
+1.9696224927902222
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.031
+Altitude
+2.043872356414795
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.033
+Altitude
+1.9788798093795776
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.025
+Altitude
+1.9669115543365479
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.025
+Altitude
+1.9670803546905518
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.027
+Altitude
+1.966509461402893
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.027
+Altitude
+2.0410537719726562
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.021
+Altitude
+1.96622633934021
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.021
+Altitude
+2.041686534881592
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.021
+Altitude
+1.9837181568145752
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.021
+Altitude
+1.9676519632339478
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.021
+Altitude
+2.043160915374756
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.019
+Altitude
+1.969281792640686
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.016979958411221366
+Altitude
+2.0443601608276367
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.016979958411221366
+Altitude
+1.9700771570205688
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.015050072646657718
+Altitude
+2.045323371887207
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.010806348175910183
+Altitude
+1.9699839353561401
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.010806348175910183
+Altitude
+2.045142889022827
+
+control errors: 
+Angle:
+-2.0
+Perpendicular_distance:
+-0.0031028709711647907
+Altitude
+2.0454628467559814
+
+control errors: 
+Angle:
+-3.0
+Perpendicular_distance:
+0.0001570078687288319
+Altitude
+1.970441222190857
+
+control errors: 
+Angle:
+-3.0
+Perpendicular_distance:
+0.0001570078687288319
+Altitude
+1.991453766822815
+
+control errors: 
+Angle:
+-4.0
+Perpendicular_distance:
+0.008768807031106041
+Altitude
+1.9778006076812744
+
+control errors: 
+Angle:
+-4.0
+Perpendicular_distance:
+0.008768807031106041
+Altitude
+2.045128583908081
+
+control errors: 
+Angle:
+-4.0
+Perpendicular_distance:
+0.023153242577208334
+Altitude
+1.9699819087982178
+
+control errors: 
+Angle:
+-6.0
+Perpendicular_distance:
+0.030098479513542897
+Altitude
+2.044877767562866
+
+control errors: 
+Angle:
+-6.0
+Perpendicular_distance:
+0.030098479513542897
+Altitude
+1.9697788953781128
+
+control errors: 
+Angle:
+-7.0
+Perpendicular_distance:
+0.039074907944226994
+Altitude
+1.9895143508911133
+
+control errors: 
+Angle:
+-9.0
+Perpendicular_distance:
+0.05235667186552127
+Altitude
+2.0452640056610107
+
+control errors: 
+Angle:
+-9.0
+Perpendicular_distance:
+0.05235667186552127
+Altitude
+1.9705381393432617
+
+control errors: 
+Angle:
+-11.0
+Perpendicular_distance:
+0.06334140231365025
+Altitude
+2.046452760696411
+
+control errors: 
+Angle:
+-12.0
+Perpendicular_distance:
+0.07608760116641906
+Altitude
+1.9714120626449585
+
+control errors: 
+Angle:
+-12.0
+Perpendicular_distance:
+0.07608760116641906
+Altitude
+2.0474674701690674
+
+control errors: 
+Angle:
+-13.0
+Perpendicular_distance:
+0.09189030299156577
+Altitude
+2.0472333431243896
+
+control errors: 
+Angle:
+-14.0
+Perpendicular_distance:
+0.09581213871796933
+Altitude
+1.9725167751312256
+
+control errors: 
+Angle:
+-14.0
+Perpendicular_distance:
+0.09581213871796933
+Altitude
+2.046245813369751
+
+control errors: 
+Angle:
+-17.0
+Perpendicular_distance:
+0.10601583549076385
+Altitude
+2.0453360080718994
+
+control errors: 
+Angle:
+-17.0
+Perpendicular_distance:
+0.10601583549076385
+Altitude
+1.969885230064392
+
+control errors: 
+Angle:
+-17.0
+Perpendicular_distance:
+0.11542050376680454
+Altitude
+2.042848825454712
+
+control errors: 
+Angle:
+-20.0
+Perpendicular_distance:
+0.12010446874877535
+Altitude
+1.9923007488250732
+
+control errors: 
+Angle:
+-20.0
+Perpendicular_distance:
+0.12010446874877535
+Altitude
+2.039743661880493
+
+control errors: 
+Angle:
+-19.0
+Perpendicular_distance:
+0.11880977237105676
+Altitude
+2.037808418273926
+
+control errors: 
+Angle:
+-22.0
+Perpendicular_distance:
+0.12055256635162835
+Altitude
+1.9604213237762451
+
+control errors: 
+Angle:
+-22.0
+Perpendicular_distance:
+0.12055256635162835
+Altitude
+2.0338644981384277
+
+control errors: 
+Angle:
+-22.0
+Perpendicular_distance:
+0.11295712484735908
+Altitude
+2.0319786071777344
+
+control errors: 
+Angle:
+-23.0
+Perpendicular_distance:
+0.0984940193194111
+Altitude
+1.9554615020751953
+
+control errors: 
+Angle:
+-23.0
+Perpendicular_distance:
+0.0984940193194111
+Altitude
+2.0294058322906494
+
+control errors: 
+Angle:
+-22.0
+Perpendicular_distance:
+0.0943387867242394
+Altitude
+2.0275073051452637
+
+control errors: 
+Angle:
+-21.0
+Perpendicular_distance:
+0.08273029000870565
+Altitude
+1.9515998363494873
+
+control errors: 
+Angle:
+-21.0
+Perpendicular_distance:
+0.08273029000870565
+Altitude
+2.026268482208252
+
+control errors: 
+Angle:
+-21.0
+Perpendicular_distance:
+0.06169162925408321
+Altitude
+1.9503209590911865
+
+control errors: 
+Angle:
+-20.0
+Perpendicular_distance:
+0.038952334311300275
+Altitude
+1.950074315071106
+
+control errors: 
+Angle:
+-20.0
+Perpendicular_distance:
+0.038952334311300275
+Altitude
+2.025587320327759
+
+control errors: 
+Angle:
+-19.0
+Perpendicular_distance:
+0.01398195403062121
+Altitude
+1.9508408308029175
+
+control errors: 
+Angle:
+-19.0
+Perpendicular_distance:
+-0.009423999868221015
+Altitude
+2.026582956314087
+
+control errors: 
+Angle:
+-19.0
+Perpendicular_distance:
+-0.009423999868221015
+Altitude
+2.0276262760162354
+
+control errors: 
+Angle:
+-17.0
+Perpendicular_distance:
+-0.02860995303709624
+Altitude
+1.953447937965393
+
+control errors: 
+Angle:
+-16.0
+Perpendicular_distance:
+-0.04859354521202287
+Altitude
+2.029433488845825
+
+control errors: 
+Angle:
+-16.0
+Perpendicular_distance:
+-0.04859354521202287
+Altitude
+2.0304348468780518
+
+control errors: 
+Angle:
+-14.0
+Perpendicular_distance:
+-0.06621681499461277
+Altitude
+1.955841064453125
+
+control errors: 
+Angle:
+-14.0
+Perpendicular_distance:
+-0.06621681499461277
+Altitude
+2.0305676460266113
+
+control errors: 
+Angle:
+-12.0
+Perpendicular_distance:
+-0.08559975462958437
+Altitude
+1.9560091495513916
+
+control errors: 
+Angle:
+-9.0
+Perpendicular_distance:
+-0.10173189908129918
+Altitude
+2.030819892883301
+
+control errors: 
+Angle:
+-9.0
+Perpendicular_distance:
+-0.10173189908129918
+Altitude
+1.9612269401550293
+
+control errors: 
+Angle:
+-7.0
+Perpendicular_distance:
+-0.11576229171181925
+Altitude
+1.955532431602478
+
+control errors: 
+Angle:
+-4.0
+Perpendicular_distance:
+-0.13346431331358408
+Altitude
+2.0313305854797363
+
+control errors: 
+Angle:
+-4.0
+Perpendicular_distance:
+-0.13346431331358408
+Altitude
+2.0317578315734863
+
+control errors: 
+Angle:
+-3.0
+Perpendicular_distance:
+-0.1475354913624622
+Altitude
+1.9572349786758423
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.16681749343318178
+Altitude
+2.032236337661743
+
+control errors: 
+Angle:
+-1.0
+Perpendicular_distance:
+-0.16681749343318178
+Altitude
+1.9568175077438354
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.179
+Altitude
+2.0317258834838867
+
+control errors: 
+Angle:
+2.0
+Perpendicular_distance:
+-0.18011244042100566
+Altitude
+2.0309622287750244
+
+control errors: 
+Angle:
+2.0
+Perpendicular_distance:
+-0.18011244042100566
+Altitude
+2.0300652980804443
+
+control errors: 
+Angle:
+4.0
+Perpendicular_distance:
+-0.18234495177631543
+Altitude
+2.029339551925659
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.17295177296910558
+Altitude
+1.953675389289856
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.17295177296910558
+Altitude
+2.0273184776306152
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.16294015177330798
+Altitude
+2.0257925987243652
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.16294015177330798
+Altitude
+1.9504787921905518
+
+control errors: 
+Angle:
+7.0
+Perpendicular_distance:
+-0.15617776243350284
+Altitude
+2.0242931842803955
+
+control errors: 
+Angle:
+8.0
+Perpendicular_distance:
+-0.14836892448623326
+Altitude
+1.949116587638855
+
+control errors: 
+Angle:
+8.0
+Perpendicular_distance:
+-0.14836892448623326
+Altitude
+1.9490079879760742
+
+control errors: 
+Angle:
+9.0
+Perpendicular_distance:
+-0.13115703328375936
+Altitude
+2.0238234996795654
+
+control errors: 
+Angle:
+8.0
+Perpendicular_distance:
+-0.1237995649547174
+Altitude
+1.9498261213302612
+
+control errors: 
+Angle:
+8.0
+Perpendicular_distance:
+-0.1237995649547174
+Altitude
+1.9689141511917114
+
+control errors: 
+Angle:
+10.0
+Perpendicular_distance:
+-0.11829349722614255
+Altitude
+2.0262508392333984
+
+control errors: 
+Angle:
+10.0
+Perpendicular_distance:
+-0.10566704885334957
+Altitude
+1.952767014503479
+
+control errors: 
+Angle:
+10.0
+Perpendicular_distance:
+-0.10566704885334957
+Altitude
+1.9690537452697754
+
+control errors: 
+Angle:
+11.0
+Perpendicular_distance:
+-0.09628221059756589
+Altitude
+1.9551591873168945
+
+control errors: 
+Angle:
+10.0
+Perpendicular_distance:
+-0.09176076920780228
+Altitude
+1.956680417060852
+
+control errors: 
+Angle:
+10.0
+Perpendicular_distance:
+-0.09176076920780228
+Altitude
+1.96988844871521
+
+control errors: 
+Angle:
+9.0
+Perpendicular_distance:
+-0.08790426231296725
+Altitude
+1.9603407382965088
+
+control errors: 
+Angle:
+9.0
+Perpendicular_distance:
+-0.08790426231296725
+Altitude
+1.961284875869751
+
+control errors: 
+Angle:
+9.0
+Perpendicular_distance:
+-0.07293250273899997
+Altitude
+2.0384669303894043
+
+control errors: 
+Angle:
+10.0
+Perpendicular_distance:
+-0.05346742946630492
+Altitude
+1.9654946327209473
+
+control errors: 
+Angle:
+10.0
+Perpendicular_distance:
+-0.05346742946630492
+Altitude
+1.968323826789856
+
+control errors: 
+Angle:
+8.0
+Perpendicular_distance:
+-0.04159125888714595
+Altitude
+2.0455167293548584
+
+control errors: 
+Angle:
+7.0
+Perpendicular_distance:
+-0.038099953196985815
+Altitude
+1.972366452217102
+
+control errors: 
+Angle:
+7.0
+Perpendicular_distance:
+-0.038099953196985815
+Altitude
+2.0493710041046143
+
+control errors: 
+Angle:
+7.0
+Perpendicular_distance:
+-0.02068641703226233
+Altitude
+2.0518670082092285
+
+control errors: 
+Angle:
+7.0
+Perpendicular_distance:
+-0.01229375325431145
+Altitude
+1.9780255556106567
+
+control errors: 
+Angle:
+7.0
+Perpendicular_distance:
+-0.01229375325431145
+Altitude
+2.053929328918457
+
+control errors: 
+Angle:
+7.0
+Perpendicular_distance:
+0.0006269381214258799
+Altitude
+2.054258346557617
+
+control errors: 
+Angle:
+6.0
+Perpendicular_distance:
+0.004659024087038407
+Altitude
+1.9793596267700195
+
+control errors: 
+Angle:
+6.0
+Perpendicular_distance:
+0.004659024087038407
+Altitude
+2.0540049076080322
+
+control errors: 
+Angle:
+6.0
+Perpendicular_distance:
+0.00507713794010902
+Altitude
+2.053295850753784
+
+control errors: 
+Angle:
+6.0
+Perpendicular_distance:
+0.004868081013573713
+Altitude
+1.9772214889526367
+
+control errors: 
+Angle:
+6.0
+Perpendicular_distance:
+0.004868081013573713
+Altitude
+2.0511066913604736
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-8.7155742747658e-05
+Altitude
+2.049776315689087
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-8.7155742747658e-05
+Altitude
+1.974023699760437
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.004121608749994791
+Altitude
+2.0471394062042236
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.008105484075532193
+Altitude
+2.045161724090576
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.008105484075532193
+Altitude
+1.9692649841308594
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.010433400288864096
+Altitude
+2.042340040206909
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.014541912885016665
+Altitude
+2.041285991668701
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.014541912885016665
+Altitude
+2.0396130084991455
+
+control errors: 
+Angle:
+5.0
+Perpendicular_distance:
+-0.01587363440025682
+Altitude
+2.0378317832946777
+
+control errors: 
+Angle:
+-87.0
+Perpendicular_distance:
+0.35708643942605517
+Altitude
+2.0367496013641357
+
+control errors: 
+Angle:
+-87.0
+Perpendicular_distance:
+0.35708643942605517
+Altitude
+2.035114049911499
+
+control errors: 
+Angle:
+-89.0
+Perpendicular_distance:
+0.41219903650099243
+Altitude
+2.110642194747925
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.1952061653137207
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.173981189727783
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0873804092407227
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.000495433807373
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9633333683013916
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.945932388305664
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.941246509552002
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9432674646377563
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9453465938568115
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9464077949523926
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9469140768051147
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9479949474334717
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.95200514793396
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9572168588638306
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9638885259628296
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9714018106460571
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9815460443496704
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9885742664337158
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+1.9948173761367798
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0018067359924316
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0061144828796387
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.009722948074341
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0127153396606445
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.015169143676758
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0171093940734863
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0189599990844727
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0198447704315186
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0203168392181396
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0203890800476074
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0201010704040527
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.019554615020752
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0185165405273438
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0175700187683105
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.016502618789673
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0149548053741455
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.013744592666626
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0129189491271973
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0112640857696533
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
+control errors: 
+Angle:
+0.0
+Perpendicular_distance:
+-0.0
+Altitude
+2.0108540058135986
+
