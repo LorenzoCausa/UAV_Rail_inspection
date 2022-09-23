@@ -117,7 +117,7 @@ def main():
 
     while not rospy.is_shutdown():
         
-        V_x=2             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
+        V_x=0.3             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
         V_y=1*x_perp
 
         cmd.roll=V_x*math.cos(rad_angle)+V_y*math.sin(rad_angle)
