@@ -9,6 +9,16 @@ from geometry_msgs.msg import Pose
 from my_custom_interfaces.msg import Drone_cmd
 from std_msgs.msg import Float32
 
+import argparse
+import os
+import sys
+from pathlib import Path
+FILE = Path(__file__).resolve()
+ROOT = FILE.parents[0]  # root directory
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))  # add ROOT to PATH
+ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
+
 # GLOBAL VARIABLES
 x=float(0)
 y=float(0)
@@ -103,6 +113,7 @@ def main():
 
     cmd=Drone_cmd()
     rate = rospy.Rate(20) # 20hz 
+    print("Non-linear controller started!")
 
     while not rospy.is_shutdown():
         
@@ -133,7 +144,7 @@ def main():
             cmd.roll = 0
 
         command_pub.publish(cmd)
-        
+
         #-----------------------PRINT-----------------------------------------------
         #print("\nrail detected: ",(rail_detected!=42)," x:",x,", y:",y,", angle:",angle,", ground distance:",ground_distance)
         #print("commands: ")
@@ -142,7 +153,14 @@ def main():
         #print("roll: ", cmd.roll)
         #print("throttle: ", cmd.throttle)
         #print("x_perp: ",x_perp)
+
+        #----------------------CONTROL ERROR FILE-----------------------------------------
+        file_txt=open(os.path.join(ROOT,"control_errors"), "a")
+        text=("command: \nyaw:\n" + str(cmd.yaw) +"\npitch:\n" + str(cmd.pitch) + "\nroll:\n" + str(cmd.roll) + "\nthrottle:\n" + str(cmd.throttle) + "\nx_perp:\n" + str(x_perp) + "\n\n")
+        file_txt.write(text)
+        file_txt.close()
         #-------------------------------------------------------------------------------
+
         rate.sleep()
 
 if __name__ == "__main__":
