@@ -26,7 +26,7 @@ class send_cmd_socket():
         path = os.path.dirname(os.path.abspath(__file__))+"/cmd.JSON"
         print(path)
         self.data = json.load(open(path))
-        print("just read")
+        print("Started")
 
         self.sub = rospy.Subscriber("/cmd_vel", Drone_cmd, self.send_cmd_to_app, queue_size=1)
 
@@ -44,14 +44,14 @@ class send_cmd_socket():
         self.data["throttle"] = cmd.throttle
 
         msg = json.dumps(self.data)
-        print("before sendig")
+        #print("before sendig")
         client = socket.socket(
         socket.AF_INET, socket.SOCK_STREAM)  # creo il client
         client.connect(self.ADDR)  # indirizzo del server a cui devo connettermi
-        print("Sending the jason msg...")
+        #print("Sending the jason msg...")
         message = msg.encode(self.FORMAT)  # codificarlo in binario per la trasmissione
         client.send(message)  # mando msg
-        print("jason msg sent")
+        #print("jason msg sent")
         # print(client.recv(2048).decode(FORMAT))# decodifico risposta e la printo
         client.close()
         #self.send_msg(msg, client)

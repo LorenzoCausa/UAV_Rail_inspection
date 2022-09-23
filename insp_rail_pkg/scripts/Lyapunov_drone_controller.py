@@ -96,7 +96,9 @@ def callback_ground(distance):
 def main():
     rospy.init_node('lyapunov_drone_controller', anonymous=False)
     rospy.Subscriber("localization", Pose, callback_loc,queue_size=1)
-    rospy.Subscriber("ground_distance", Float32, callback_ground,queue_size=1)
+    #rospy.Subscriber("ground_distance", Float32, callback_ground,queue_size=1)       #ground_distance or barometer_altitude no both
+    rospy.Subscriber("barometer_altitude", Float32, callback_ground,queue_size=1)
+
     command_pub=rospy.Publisher("command", Drone_cmd, queue_size=1) #maybe is better to use cmd_vel
 
     cmd=Drone_cmd()
@@ -131,13 +133,16 @@ def main():
             cmd.roll = 0
 
         command_pub.publish(cmd)
-        print("\nrail detected: ",(rail_detected!=42)," x:",x,", y:",y,", angle:",angle,", ground distance:",ground_distance)
-        print("commands: ")
-        print("yaw: ", cmd.yaw)
-        print("pitch: ",cmd.pitch)
-        print("roll: ", cmd.roll)
-        print("throttle: ", cmd.throttle)
+        
+        #-----------------------PRINT-----------------------------------------------
+        #print("\nrail detected: ",(rail_detected!=42)," x:",x,", y:",y,", angle:",angle,", ground distance:",ground_distance)
+        #print("commands: ")
+        #print("yaw: ", cmd.yaw)
+        #print("pitch: ",cmd.pitch)
+        #print("roll: ", cmd.roll)
+        #print("throttle: ", cmd.throttle)
         #print("x_perp: ",x_perp)
+        #-------------------------------------------------------------------------------
         rate.sleep()
 
 if __name__ == "__main__":

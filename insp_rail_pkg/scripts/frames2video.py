@@ -34,7 +34,7 @@ def convert_frames_to_video(pathIn,pathOut,fps):
 def main():
     pathIn= os.path.join(ROOT,"frames/")
     pathOut = os.path.join(ROOT,"out_video","video.avi")
-    fps = 15
+    fps = 10
     convert_frames_to_video(pathIn, pathOut, fps)
     print("finished")
 if __name__=="__main__":
