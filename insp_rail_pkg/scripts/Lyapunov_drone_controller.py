@@ -38,7 +38,7 @@ P_gain_yaw=0.2
 D_gain_yaw=0#0.5
 I_gain_yaw=0#0.0001
 
-P_gain_throttle=0.5
+P_gain_throttle=0.1
 D_gain_throttle=0#0.1
 I_gain_throttle=0#0.0001
 
@@ -50,7 +50,7 @@ yaw_integral=0
 throttle_integral=0
 pitch_integral=0
 
-altitude=2 # meters
+altitude=4 # meters
 
 # FUNCTIONs
 def update_olds():
@@ -117,7 +117,7 @@ def main():
 
     while not rospy.is_shutdown():
         
-        V_x=0.3             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
+        V_x=2             # NOTA IMPORTANTE: Puoi scegliere qualsiasi V_x
         V_y=1*x_perp
 
         cmd.roll=V_x*math.cos(rad_angle)+V_y*math.sin(rad_angle)

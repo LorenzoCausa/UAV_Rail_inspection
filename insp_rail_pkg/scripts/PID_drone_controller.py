@@ -50,7 +50,7 @@ yaw_integral=0
 throttle_integral=0
 pitch_integral=0
 
-altitude=2 # meters
+altitude=4 # meters
 
 # FUNCTIONs
 def update_olds():
@@ -138,7 +138,7 @@ def main():
         #    cmd.roll=0
 
         # speed management2
-        #cmd.roll=max(2-abs(x)/50,0)+max(2-abs(angle)/10,0) # MAX =2+2=4  best for now 
+        cmd.roll=max(1-abs(x)/100,0)+max(1-abs(angle)/20,0) # MAX =2+2=4  best for now 
 
         # speed management3
         #cmd.roll=max(2-abs(x)/50,0)*max(2-abs(angle)/10,0) # MAX =2*2=4          
