@@ -7,6 +7,17 @@ import roslib
 from geometry_msgs.msg import Pose 
 from my_custom_interfaces.msg import Drone_cmd
 from std_msgs.msg import Float32
+import math
+
+import argparse
+import os
+import sys
+from pathlib import Path
+FILE = Path(__file__).resolve()
+ROOT = FILE.parents[0]  # root directory
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))  # add ROOT to PATH
+ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
 
 # GLOBAL VARIABLES
 x=float(0)
@@ -14,6 +25,9 @@ y=float(0)
 angle=float(0)
 ground_distance=float(0)
 rail_detected=float(0)
+
+rad_angle=float(0)
+x_perp=float(0)
 
 old_x=float(0)
 old_y=float(0)
@@ -54,11 +68,34 @@ def update_integrals(yaw_e, throttle_e,pitch_e):
 
 # SUBSCRIBERs CALLBACK
 def callback_loc(pose):
-    global x,y,angle,rail_detected
+    global x,y,angle,rail_detected,rad_angle,x_perp
     x=pose.position.x
     y=pose.position.y
     angle=pose.orientation.z
     rail_detected=pose.orientation.w
+    im_width=pose.orientation.x
+    im_height=pose.orientation.y
+
+    x=im_width*x/1000
+    y=im_height*y/1000
+
+    rad_angle=math.radians(angle)
+
+    if(angle==0):
+        x_line=x
+        y_line=0
+
+    else:
+        m=math.tan(-math.pi/2-rad_angle)
+        x_line=m*(m*x-y)/(1+m*m)
+        y_line=-(m*x-y)/(1+m*m)
+
+    if(x_line>0):
+        x_perp=math.sqrt(x_line*x_line+y_line*y_line)
+    else:
+        x_perp=-math.sqrt(x_line*x_line+y_line*y_line)
+
+    x_perp=x_perp/im_width
 
 def callback_ground(distance):
     global ground_distance
@@ -72,6 +109,7 @@ def main():
 
     cmd=Drone_cmd()
     rate = rospy.Rate(20) # 20hz 
+    print("PID controller started!")
 
     while not rospy.is_shutdown():
 
@@ -111,12 +149,22 @@ def main():
             cmd.roll = 0
 
         command_pub.publish(cmd)
-        print("rail detected: ",(rail_detected!=42)," x:",x,", y:",y,", angle:",angle,", ground distance:",ground_distance)
-        print("commands: ")
-        print("yaw: ", cmd.yaw)
-        print("pitch: ",cmd.pitch)
-        print("roll: ", cmd.roll)
-        print("throttle: ", cmd.throttle)
+
+        #-----------------------PRINT-----------------------------------------------
+        #print("\nrail detected: ",(rail_detected!=42)," x:",x,", y:",y,", angle:",angle,", ground distance:",ground_distance)
+        #print("commands: ")
+        #print("yaw: ", cmd.yaw)
+        #print("pitch: ",cmd.pitch)
+        #print("roll: ", cmd.roll)
+        #print("throttle: ", cmd.throttle)
+        #print("x_perp: ",x_perp)
+         #----------------------CONTROL ERROR FILE-----------------------------------------
+        file_txt=open(os.path.join(ROOT,"control_errors"), "a")
+        text=("control errors and commands: \nAngle:\n" + str(angle) + "\nPerpendicular_distance:\n" + str(x_perp) + "\nAltitude\n" + str(ground_distance) + "\nYaw:\n" + str(cmd.yaw) + "\nPitch:\n" + str(cmd.pitch) + "\nRoll:\n" + str(cmd.roll) + "\nThrottle:\n" + str(cmd.throttle) +"\n\n")
+        file_txt.write(text)
+        file_txt.close()
+        #-------------------------------------------------------------------------------
+
         rate.sleep()
 
 if __name__ == "__main__":

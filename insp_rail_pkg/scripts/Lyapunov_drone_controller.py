@@ -156,7 +156,7 @@ def main():
 
         #----------------------CONTROL ERROR FILE-----------------------------------------
         file_txt=open(os.path.join(ROOT,"control_errors"), "a")
-        text=("control errors: \nAngle:\n" + str(angle) + "\nPerpendicular_distance:\n" + str(x_perp) + "\nAltitude\n" + str(ground_distance) + "\n\n")
+        text=("control errors and commands: \nAngle:\n" + str(angle) + "\nPerpendicular_distance:\n" + str(x_perp) + "\nAltitude\n" + str(ground_distance) + "\nYaw:\n" + str(cmd.yaw) + "\nPitch:\n" + str(cmd.pitch) + "\nRoll:\n" + str(cmd.roll) + "\nThrottle:\n" + str(cmd.throttle) +"\n\n")
         file_txt.write(text)
         file_txt.close()
         #-------------------------------------------------------------------------------
