@@ -172,8 +172,8 @@ def getOrientedBoxes(mask,plot,pub=None):
     #print(avg_angle)
     #print(avg_center)
 
-    #label = str(angle) + " deg " + str(round(1000*(center[0]-im_width/2)/im_width)) +" x "+str(round(1000*(center[1]-im_height/2)/im_height)) +" y "
-    label = str(angle) + " deg "
+    label = str(angle) + " deg " + str(round(1000*(center[0]-im_width/2)/im_width)) +" x "+str(round(1000*(center[1]-im_height/2)/im_height)) +" y "
+    #label = str(angle) + " deg "
     cv2.drawContours(mask,[box],0,(0,0,255),2)
     cv2.putText(mask, label, (center[0]-0, center[1]-25), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,200,0), 1, cv2.LINE_AA) 
 
@@ -261,6 +261,9 @@ def main():
             cv2.waitKey(0)
 
         if(os.path.isdir(args.source[0])):
+            pub_boxes = rospy.Publisher('boxes_and_mask', SensImage, queue_size=1)
+            pub_segm = rospy.Publisher('segmentation', SensImage, queue_size=1)
+            pub_loc = rospy.Publisher('localization', Pose, queue_size=1)
             
             files = [f for f in os.listdir(args.source[0]) if os.path.isfile(os.path.join(args.source[0], f))]
             #for sorting the file names properly
@@ -291,9 +294,27 @@ def main():
                     )
 
                 mask=getMask(outputs)
-                getOrientedBoxes(mask,True)
-                segmentation=showSegmentation(v,outputs)
+                [center,angle,altitude]=getOrientedBoxes(mask,True,pub_boxes)
+                segmentation=showSegmentation(v,outputs,True,pub_segm)
                 
+                
+                if(center is not None and angle is not None):
+                    loc=Pose()
+                    loc.position.x=center[0]
+                    loc.position.y=center[1]
+                    loc.position.z=altitude
+                    loc.orientation.x=im_width
+                    loc.orientation.y=im_height
+                    loc.orientation.z=angle
+                    pub_loc.publish(loc)
+
+                else:
+                    loc=Pose()
+                    loc.orientation.w = 42 # Just a way to say that no rail was detected
+                    loc.orientation.x=im_width
+                    loc.orientation.y=im_height
+                    pub_loc.publish(loc)
+
                 print(files[i])
                 print("img dimension: ",img.shape)
                 print("total time: ", time.time()-now)
