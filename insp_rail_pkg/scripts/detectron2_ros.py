@@ -172,8 +172,8 @@ def getOrientedBoxes(mask,plot,pub=None):
     #print(avg_angle)
     #print(avg_center)
 
-    label = str(angle) + " deg " + str(round(1000*(center[0]-im_width/2)/im_width)) +" x "+str(round(1000*(center[1]-im_height/2)/im_height)) +" y "
-    #label = str(angle) + " deg "
+    #label = str(angle) + " deg " + str(round(1000*(center[0]-im_width/2)/im_width)) +" x "+str(round(1000*(center[1]-im_height/2)/im_height)) +" y "
+    label = str(angle) + " deg "
     cv2.drawContours(mask,[box],0,(0,0,255),2)
     cv2.putText(mask, label, (center[0]-0, center[1]-25), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,200,0), 1, cv2.LINE_AA) 
 

@@ -100,7 +100,10 @@ def callback_loc(pose):
         x2_image=-1000000
         x3_image=1000000
 
+    label = "x perp: " + str(x_perp)
     cv_image=cv2.line(cv_image, (int(x2_image),int(y2_image)), (int(x3_image),int(y3_image)), (255,255,0),4)
+    cv2.putText(cv_image, label, (int(im_width/2), int(im_height/2)), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (200,0,0), 1, cv2.LINE_AA) 
+
 
 
     #print("x_line:",x_line," y_line:",y_line," x:",x," y:",y," m:",m," x_line_image:",x_line_image," y_line_image:",y_line_image)
