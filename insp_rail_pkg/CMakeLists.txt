@@ -52,6 +52,7 @@ include_directories(
    scripts/Lyapunov_drone_controller.py
    scripts/odometry_lyap.py
    scripts/line_detection.py
+   scripts/real_errors.py
    
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
