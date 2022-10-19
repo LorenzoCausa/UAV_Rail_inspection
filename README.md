@@ -4,7 +4,9 @@ Method for the automated inspection of a rail section.
 **important:** The repo does not contains the weights
 
 ## How to install it
-This is a ROS package (ROS noetic), you can install it just like a normal ros package
+This are two ROS packages (ROS noetic), you can install them just like a normal ros package. 
+
+Put this repo in your ros work space and run  `catkin_make ` or  `catkin build `
 
 ## How to build your model
 To train your model, and download the correspondant weights you can use my colab notebook:
